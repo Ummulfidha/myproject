@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+   <title>Admin Home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bundle.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/loginn.css' %}">
+
+</head>
+<body><center>
+  <br>
+ <br><h1><span class="badge badge-info">GYM</span><span class="badge badge-light">CLUB</span></h1>
+<br><br>
+  <div class="container">
+ <div class="list-group">
+
+   <a href="{% url 'admin_home' %}" class="list-group-item list-group-item-action">Admin Home</a>
+   <a href="{% url 'add_trainer' %}" class="list-group-item list-group-item-action">Add Trainer</a>
+   <a href="{% url 'view_trainer' %}" class="list-group-item list-group-item-action">View Trainer</a>
+   <a href="{% url 'edit_delete' %}" class="list-group-item list-group-item-action">Edit / Delete Trainer</a>
+     <a href="{% url 'edit_delete_client' %}" class="list-group-item list-group-item-action">Edit / Delete Client</a>
+   <a href="{% url 'view_client' %}" class="list-group-item list-group-item-action">View Client</a>
+     <a href="{% url 'gym_class' %}" class="list-group-item list-group-item-action">View Gym Classes</a>
+
+
+
+     <a href="#" class="list-group-item list-group-item-action">logout</a>
+
+</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,10 @@
+body{
+    background: #066093;
+    background: url(../images/bgg2.jpeg)no-repeat 0px 0px;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    -ms-background-size:cover;
+    padding-bottom:2.5em;
+}

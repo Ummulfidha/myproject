@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <title>Add Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <script src="{% static 'js/jquery.slim.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bundle.min.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/image.css' %}">
+</head>
+<body>
+    <div class="container-sm">
+    <br>
+    <br><h1 align="center"><span class="badge badge-info">GYM</span><span class="badge badge-light">CLUB</span></h1><br>
+    <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+
+        <label for="tname"><h5  class="text-white">Name :</h5></label>
+       <input type="text" class="form-control" id="tname" placeholder="Enter full name" name="tname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="tage"><h5  class="text-white">Age :</h5></label>
+       <input type="number" class="form-control" id="tage" placeholder="Enter age" name="tage" required>
+    </div>
+
+     <div class="form-group">
+        <label><h5  class="text-white">Gender :</h5></label>
+    <div class="form-check-inline">
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio">Male
+        </label>
+    </div>
+    <div class="form-check-inline">
+         <label class="form-check-label">
+             <input type="radio" class="form-check-input" name="optradio">Female
+         </label>
+    </div>
+           <div class="form-check-inline">
+         <label class="form-check-label">
+             <input type="radio" class="form-check-input" name="optradio">Other
+         </label>
+    </div>
+         <div class="form-group">
+        <label for="tadd"><h5  class="text-white">Address :</h5></label>
+       <input type="text" class="form-control" id="tadd" placeholder="Enter address" name="tadm" required>
+    </div>
+
+         <div class="form-group">
+             <label for="email"><h5  class="text-white">Email:</h5></label>
+             <input type="email" class="form-control" id="email" placeholder="Enter Email id" name="temail" >
+         </div>
+
+         <div class="form-group">
+             <label for="phone"><h5  class="text-white">Phone Number:</h5></label>
+             <input type="text" class="form-control" id="phone" pattern="[6-9]{1}[0-9]{9}" placeholder="Enter phone number" name="tphone" maxlength="10" required>
+             <small><h9 class="text-white">  Format:123-45-678</h9></small> <br>
+         </div>
+
+     </div>
+
+     <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+    </div>
+</body>
+</html>
