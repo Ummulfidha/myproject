@@ -11,6 +11,7 @@ class addtrainermodel(models.Model):
     tname = models.CharField(max_length=20)
     tage = models.IntegerField()
     tphone = models.IntegerField()
+    tgender = models.CharField(max_length=10)
     temail = models.EmailField(max_length=25)
     tadm = models.CharField(max_length=34, default='test')
 
