@@ -35,8 +35,10 @@ def add_trainer(request):
             tage = a.cleaned_data['tage']
             tphone = a.cleaned_data['tphone']
             temail = a.cleaned_data['temail']
+            tgender=a.cleaned_data['tgender']
             tadm = a.cleaned_data['tadm']
-            b = addtrainermodel(tname=tname, tage=tage, tphone=tphone, temail=temail, tadm=tadm)
+            b = addtrainermodel(tname=tname, tage=tage, tgender=tgender, tphone=tphone, temail=temail, tadm=tadm)
+            print(b.tname,b.tgender)
             b.save()
             return redirect(view_trainer)
         else:
