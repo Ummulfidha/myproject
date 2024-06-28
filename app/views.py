@@ -47,15 +47,7 @@ def add_trainer(request):
 
 def view_trainer(request):
     obj = addtrainermodel.objects.all()
-    # if request.method=="POST":
-    #     tname = request.POST['tname']
-    #     tage = request.POST.get('tage')
-    #     tphone = request.POST.get('tphone')
-    #     temail = request.POST.get('temail')
-    #     tadm = request.POST['tadm']
-    #     b = addtrainermodel(tname=tname, tage=tage, tphone=tphone, temail=temail, tadm=tadm)
-    #     b.save()
-    #     return redirect('view_trainer')
+    print(obj)
     return render(request, 'view_trainer.html', {'obj':obj})
 
 def view_client(request):
